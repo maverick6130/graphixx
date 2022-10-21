@@ -13,7 +13,7 @@ void Object::Draw(const Camera &camera)
     if (mShaderCompile)
     {        
         mShader->Bind();
-        SetUpUniforms();
+        SetUpUniforms(camera);
         glBindVertexArray(mVAO);
         glDrawArrays(mDrawType, 0, mVBOSize);
         glBindVertexArray(0);
@@ -44,7 +44,7 @@ void Object::SetUpAttribArray()
     glVertexAttribPointer (0, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 }
 
-void Object::SetUpUniforms()
+void Object::SetUpUniforms(const Camera& camera)
 {
 }
 

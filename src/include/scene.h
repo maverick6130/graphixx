@@ -22,7 +22,7 @@ public:
 
     virtual void SetUpBuffers();
     virtual void SetUpAttribArray();
-    virtual void SetUpUniforms();
+    virtual void SetUpUniforms(const Camera& camera);
 
 protected:
     std::vector<glm::vec4> mVertexBuffer;
